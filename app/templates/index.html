@@ -8,5 +8,13 @@
     </head>
     <body>
         <h3>Hello, {{ user.username }}!</h3>
+        {% for post in posts %}
+        <div>
+            <p>
+                user: {{ post.author.username }} <br>
+                <i> {{post.body}} </i>
+            </p>
+        </div>
+        {% endfor %}
     </body>
 </html>
