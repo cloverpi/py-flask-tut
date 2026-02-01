@@ -1,20 +1,13 @@
-<html>
-    <head>
-        {%if title %}
-        <title>{{ title }} - MicroBlog</title>
-        {% else %}
-        <title>SuperDuper MicroBlog</title>
-        {% endif %}
-    </head>
-    <body>
-        <h3>Hello, {{ user.username }}!</h3>
-        {% for post in posts %}
-        <div>
-            <p>
-                user: {{ post.author.username }} <br>
-                <i> {{post.body}} </i>
-            </p>
-        </div>
-        {% endfor %}
-    </body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+    <h3>Hello, {{ user.username }}!</h3>
+    {% for post in posts %}
+    <div>
+        <p>
+            user: {{ post.author.username }} <br>
+            <i> {{post.body}} </i>
+        </p>
+    </div>
+    {% endfor %}
+{% endblock %}
