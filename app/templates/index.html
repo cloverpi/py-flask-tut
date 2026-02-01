@@ -1,0 +1,12 @@
+<html>
+    <head>
+        {%if title %}
+        <title>{{ title }} - MicroBlog</title>
+        {% else %}
+        <title>SuperDuper MicroBlog</title>
+        {% endif %}
+    </head>
+    <body>
+        <h3>Hello, {{ user.username }}!</h3>
+    </body>
+</html>
